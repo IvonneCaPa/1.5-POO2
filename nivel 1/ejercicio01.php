@@ -28,9 +28,4 @@
     $cat -> makeSound();
     $dog -> makeSound();
 
-
-
-
-
-
 ?>
