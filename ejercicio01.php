@@ -16,13 +16,17 @@
     class Dog implements Animal {
         public function makeSound()
         {
-            echo "Woof!!";
+            echo "Woof!!" . PHP_EOL;
         }
     }
 
     // crear objetos
     $cat = new Cat();
+    $dog = new Dog();
+
+    // utilizo el metodo
     $cat -> makeSound();
+    $dog -> makeSound();
 
 
 
