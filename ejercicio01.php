@@ -1,28 +1,32 @@
 <?php
 
-    //clase padre
-    abstract class Animal {
-        abstract public function makeSound();
+    // padre
+    interface Animal {
+        public function makeSound();
     }
 
-    //hijos
-    class Dog extends Animal {
-        public function makeSound() : string {
-            return "Woof!";
+    // hijos
+    class Cat implements Animal {
+        public function makeSound()
+        {
+            echo "Meow!!" . PHP_EOL;
         }
     }
 
-    class Cat extends Animal {
-        public function makeSound() : string {
-            return "Meow!";
+    class Dog implements Animal {
+        public function makeSound()
+        {
+            echo "Woof!!";
         }
     }
 
-    // Crear objeto y llamar al metodo
-    $dog = new Dog();
-    echo $dog->makeSound() . PHP_EOL; 
-
+    // crear objetos
     $cat = new Cat();
-    echo $cat->makeSound() . PHP_EOL; 
+    $cat -> makeSound();
+
+
+
+
+
 
 ?>
